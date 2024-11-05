@@ -5,22 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#1B523B"
-    tools:context=".InicialActivity">
-
-    <Button
-        android:id="@+id/bt_recenseador"
-        android:layout_width="228dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/verde"
-        android:text="Recenseador"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.585" />
+    tools:context="com.example.ola_mundo.InicialAdministradorActivity">
 
     <ImageView
         android:id="@+id/iv_logo"
@@ -39,7 +24,7 @@
         android:layout_width="261dp"
         android:layout_height="58dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Seja bem-vindo ao censo da Ilha Primeira"
+        android:text="Seja bem-vindo administrador do censo"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="388dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Quem é você?"
+        android:text="Gostaria de:"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,12 +48,27 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.846" />
 
+
     <Button
-        android:id="@+id/bt_administrador"
+        android:id="@+id/bt_cadastrar"
+        android:layout_width="228dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/verde"
+        android:text="Cadastrar Recenseador"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.585" />
+
+    <Button
+        android:id="@+id/informacoes"
         android:layout_width="231dp"
         android:layout_height="46dp"
         android:backgroundTint="@color/verde"
-        android:text="Administrador"
+        android:text="Ver Informações"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,5 +77,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.71"
         tools:ignore="NotSibling" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

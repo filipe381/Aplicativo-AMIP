@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Ola_mundo"
         tools:targetApi="31">
         <activity
+            android:name="com.example.ola_mundo.CadastroRecensseadorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InicialAdministradorActivity"
+            android:exported="true" />
+        <activity
             android:name=".LoginRecenseadorActivity"
             android:exported="true" />
         <activity
