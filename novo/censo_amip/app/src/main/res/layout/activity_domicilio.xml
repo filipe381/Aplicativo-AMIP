@@ -12,38 +12,128 @@
             android:id="@+id/iv_logo"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Logo"
+            app:layout_constraintEnd_toStartOf="@+id/textInicial"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.05"
             app:srcCompat="@drawable/logoamiosbg" />
 
         <TextView
             android:id="@+id/textInicial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
-            android:layout_marginBottom="636dp"
+            android:layout_marginTop="52dp"
             android:text="Identificação do domicílio"
-            android:textSize="50px"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.865"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerRua"
+            android:layout_width="0dp"
+            android:background="@drawable/rounded_background"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.285" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/verde"
+            android:padding="12dp"
+            android:spinnerMode="dropdown" />
 
         <EditText
             android:id="@+id/et_endereco"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_width="390dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_background"
+            android:hint="Endereço:"
             android:inputType="text"
-            android:text="Endereco"
-            tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="183dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerRua" />
+
+        <EditText
+            android:id="@+id/et_enderecoPostal"
+            android:background="@drawable/rounded_background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Endereço Postal:"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/et_endereco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/et_areaTerreno"
+            android:background="@drawable/rounded_background"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Área do terreno:"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/et_enderecoPostal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Spinners para opções -->
+        <Spinner
+            android:id="@+id/spinnerMoradia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_areaTerreno"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/verde"
+            android:background="@drawable/rounded_background"
+            android:padding="12dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/spinnerTipoMoradia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerMoradia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="@color/verde"
+            android:padding="12dp"
+            android:background="@drawable/rounded_background"
+            android:spinnerMode="dropdown" />
+
+        <!-- Botões Voltar e Próxima -->
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="192dp"
+            android:backgroundTint="@color/verde"
+            android:text="Voltar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnProxima"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTipoMoradia"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnProxima"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="176dp"
+            android:backgroundTint="@color/verde"
+            android:text="Próxima"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnVoltar"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTipoMoradia" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
