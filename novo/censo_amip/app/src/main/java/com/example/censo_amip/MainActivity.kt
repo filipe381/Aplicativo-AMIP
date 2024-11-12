@@ -2,6 +2,8 @@ package com.example.censo_amip
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,15 +17,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Referência ao botão no layout
-        val button = findViewById<Button>(R.id.bt_intent)
-
-        // Ao clicar no botão, inicia a SecondActivity
-        button.setOnClickListener {
-            // Cria uma Intent explícita para chamar a SecondActivity
+        Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, InicialActivity::class.java)
-
-            // Inicia a SecondActivity
             startActivity(intent)
-        }
+        }, 2000) // 2000 milissegundos = 2 segundos
     }
 }
