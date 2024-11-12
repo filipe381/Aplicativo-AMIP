@@ -13,7 +13,13 @@
         android:theme="@style/Theme.Censo_amip"
         tools:targetApi="31">
         <activity
-            android:name="com.example.censo_amip.CadastroRecensseadorActivity"
+            android:name=".IndoMoradoresActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DomicilioActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CadastroRecensseadorActivity"
             android:exported="false" />
         <activity
             android:name=".InicialAdministradorActivity"
