@@ -17,6 +17,7 @@ class DomicilioActivity : AppCompatActivity() {
         val spinnerTipoMoradia: Spinner = findViewById(R.id.spinnerTipoMoradia)
 
         val ruas = listOf(
+            "Selecione uma rua",
             "Marina das Estrelas",
             "Marina das Flores",
             "Marina dos Bosques",
@@ -31,11 +32,13 @@ class DomicilioActivity : AppCompatActivity() {
         )
 
         val moradias = listOf(
+            "Exclusivamente moradia?",
             "Sim",
             "Nao"
         )
 
         val tipoMoradias = listOf(
+            "Selecione o tipo de moradia",
             "Casa própria",
             "Casa alugada",
             "Casa cedida",
@@ -44,18 +47,17 @@ class DomicilioActivity : AppCompatActivity() {
             "Apartamento cedido",
             "Barraco",
             "Chácara/Sítio"
-
         )
 
-        val ruasadapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ruas)
-        ruasadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        val moradiasadapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, moradias)
-        moradiasadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        val tipoMoradiaadapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, tipoMoradias)
-        tipoMoradiaadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val ruasadapter = ArrayAdapter(this, R.layout.spinner_item, ruas)
+        ruasadapter.setDropDownViewResource(R.layout.spinner_item)
+        val moradiasadapter = ArrayAdapter(this, R.layout.spinner_item, moradias)
+        moradiasadapter.setDropDownViewResource(R.layout.spinner_item)
+        val tipoMoradiaadapter = ArrayAdapter(this, R.layout.spinner_item, tipoMoradias)
+        tipoMoradiaadapter.setDropDownViewResource(R.layout.spinner_item)
 
-        spinnerMoradia.adapter = ruasadapter
-        spinnerRua.adapter = moradiasadapter
+        spinnerRua.adapter = ruasadapter
+        spinnerMoradia.adapter = moradiasadapter
         spinnerTipoMoradia.adapter = tipoMoradiaadapter
 
 
