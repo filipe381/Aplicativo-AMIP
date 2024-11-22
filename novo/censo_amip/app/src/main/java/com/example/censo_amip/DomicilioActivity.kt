@@ -1,25 +1,16 @@
 package com.example.censo_amip
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 
 class DomicilioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_domicilio)
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
         val spinnerRua: Spinner = findViewById(R.id.spinnerRua)
         val spinnerMoradia: Spinner = findViewById(R.id.spinnerMoradia)
@@ -39,7 +30,10 @@ class DomicilioActivity : AppCompatActivity() {
             "Canalzinho"
         )
 
-        val moradias = listOf("Sim", "Nao")
+        val moradias = listOf(
+            "Sim",
+            "Nao"
+        )
 
         val tipoMoradias = listOf(
             "Casa própria",
@@ -50,22 +44,22 @@ class DomicilioActivity : AppCompatActivity() {
             "Apartamento cedido",
             "Barraco",
             "Chácara/Sítio"
+
         )
 
-        try {
-            val ruasAdapter = ArrayAdapter(this, R.layout.spinner_item, ruas)
-            ruasAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
-            spinnerRua.adapter = ruasAdapter
+        val ruasadapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ruas)
+        ruasadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val moradiasadapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, moradias)
+        moradiasadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val tipoMoradiaadapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, tipoMoradias)
+        tipoMoradiaadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-            val moradiasAdapter = ArrayAdapter(this, R.layout.spinner_item, moradias)
-            moradiasAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
-            spinnerMoradia.adapter = moradiasAdapter
+        spinnerMoradia.adapter = ruasadapter
+        spinnerRua.adapter = moradiasadapter
+        spinnerTipoMoradia.adapter = tipoMoradiaadapter
 
-            val tipoMoradiasAdapter = ArrayAdapter(this, R.layout.spinner_item, tipoMoradias)
-            tipoMoradiasAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
-            spinnerTipoMoradia.adapter = tipoMoradiasAdapter
-        } catch (e: Exception) {
-            Log.e("DomicilioActivity", "Erro ao configurar os Spinners", e)
-        }
+
+
+
     }
-}
+    }
