@@ -20,6 +20,6 @@ class MainActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, InicialActivity::class.java)
             startActivity(intent)
-        }, 2000) // 2000 milissegundos = 2 segundos
+        }, 1000) // 1000 milissegundos = 1 segundo
     }
 }
