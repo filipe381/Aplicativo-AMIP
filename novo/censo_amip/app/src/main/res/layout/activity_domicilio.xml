@@ -34,54 +34,52 @@
         <Spinner
             android:id="@+id/spinnerRua"
             android:layout_width="0dp"
-            android:background="@drawable/rounded_background"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/iv_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rounded_background"
             android:backgroundTint="@color/verde"
             android:padding="12dp"
             android:spinnerMode="dropdown" />
 
         <EditText
             android:id="@+id/et_endereco"
-            android:layout_width="390dp"
-            android:layout_height="24dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/rounded_background"
             android:hint="Endereço:"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.476"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinnerRua" />
 
         <EditText
             android:id="@+id/et_enderecoPostal"
-            android:background="@drawable/rounded_background"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_background"
             android:hint="Endereço Postal:"
             android:inputType="text"
             app:layout_constraintTop_toBottomOf="@+id/et_endereco"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <EditText
             android:id="@+id/et_areaTerreno"
-            android:background="@drawable/rounded_background"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_background"
             android:hint="Área do terreno:"
             android:inputType="numberDecimal"
             app:layout_constraintTop_toBottomOf="@+id/et_enderecoPostal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Spinners para opções -->
         <Spinner
             android:id="@+id/spinnerMoradia"
             android:layout_width="0dp"
@@ -90,8 +88,8 @@
             app:layout_constraintTop_toBottomOf="@+id/et_areaTerreno"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/verde"
             android:background="@drawable/rounded_background"
+            android:backgroundTint="@color/verde"
             android:padding="12dp"
             android:spinnerMode="dropdown" />
 
@@ -103,12 +101,10 @@
             app:layout_constraintTop_toBottomOf="@+id/spinnerMoradia"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rounded_background"
             android:backgroundTint="@color/verde"
             android:padding="12dp"
-            android:background="@drawable/rounded_background"
             android:spinnerMode="dropdown" />
-
-        <!-- Botões Voltar e Próxima -->
 
         <Button
             android:id="@+id/btnVoltar"
@@ -133,7 +129,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnVoltar"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerTipoMoradia" />
-
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTipoMoradia"
+            app:layout_constraintVertical_bias="0.183" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
