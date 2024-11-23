@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.RadioGroup
 import android.widget.Spinner
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -20,6 +21,41 @@ class CaracteristicasDomActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val opcaoRadioGroup: RadioGroup = findViewById(R.id.opcao)
+        val opcao = when (opcaoRadioGroup.checkedRadioButtonId){
+            R.id.sim -> "Sim"
+            R.id.nao -> "Não"
+            else -> "Indefinido"
+        }
+
+        val spinneresgoto: Spinner = findViewById(R.id.spinneresgoto)
+        val esgotos = listOf(
+            "Para onde o esgoto vai: ",
+            "Rede geral",
+            "Fossa",
+            "Vala",
+            "Rios, açudes, lagos, córregos",
+            "Outro forma"
+        )
+
+        val esgotosAdapter = ArrayAdapter(this, R.layout.spinner_item, esgotos)
+        esgotosAdapter.setDropDownViewResource(R.layout.spinner_item)
+        spinneresgoto.adapter = esgotosAdapter
+
+        val spinnerlixo: Spinner = findViewById(R.id.spinnerlixo)
+        val tiposlixo = listOf(
+            "O lixo desse domicilio é: ",
+            "Coleta em domicílio",
+            "Caçamba",
+            "Queimado em propriedade",
+            "Jogando em terreno baldio",
+            "Outro Forma"
+        )
+
+        val tiposLixoAdapter = ArrayAdapter(this, R.layout.spinner_item, tiposlixo)
+        tiposLixoAdapter.setDropDownViewResource(R.layout.spinner_item)
+        spinnerlixo.adapter = tiposLixoAdapter
 
         val spinnerAbastecimentoAgua: Spinner = findViewById(R.id.spinneabastecimentoAgua)
         val abastecimentoAgua = listOf(
