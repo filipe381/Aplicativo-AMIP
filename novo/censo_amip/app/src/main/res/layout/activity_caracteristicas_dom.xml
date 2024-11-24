@@ -30,20 +30,82 @@
         app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toEndOf="@+id/iv_logo"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Spinner
         android:id="@+id/spinneabastecimentoAgua"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/rounded_background"
         android:backgroundTint="@color/verde"
         android:padding="6dp"
         android:popupBackground="@color/verde"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_logo"
         app:layout_constraintWidth_percent="0.8" />
+
+    <Spinner
+        android:id="@+id/spinneresgoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/verde"
+        android:padding="6dp"
+        android:popupBackground="@color/verde"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Spinner
+        android:id="@+id/spinnerlixo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/verde"
+        android:padding="6dp"
+        android:popupBackground="@color/verde"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <RadioGroup
+        android:id="@+id/opcao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="188dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo">
+
+        <RadioButton
+            android:id="@+id/sim"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Sim"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/nao"
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Não"
+            android:textColor="@color/black" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/btnVoltarcaracteristicasDom"

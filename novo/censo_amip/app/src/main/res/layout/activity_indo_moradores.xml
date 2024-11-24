@@ -21,6 +21,133 @@
         app:srcCompat="@drawable/logoamiosbg" />
 
 
+    <Spinner
+        android:id="@+id/spinnersexo"
+        android:layout_width="146dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/verde"
+        android:padding="6dp"
+        android:popupBackground="@color/verde"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Spinner
+        android:id="@+id/spinnercor"
+        android:layout_width="146dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="276dp"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/verde"
+        android:padding="6dp"
+        android:popupBackground="@color/verde"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/nomemorador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:background="@drawable/rounded_background"
+        android:hint="Nome do morador:"
+        android:inputType="text"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/parentesco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="344dp"
+        android:background="@drawable/rounded_background"
+        android:hint="Parentesco:"
+        android:inputType="text"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/datanascimento"
+        android:layout_width="140dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/rounded_background"
+        android:hint="DD/MM/AAAA"
+        android:inputType="text"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/telefone"
+        android:layout_width="138dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="276dp"
+        android:background="@drawable/rounded_background"
+        android:hint="Telefone"
+        android:inputType="text"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/quantidadepessoas"
+        android:layout_width="155dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_background"
+        android:hint="Quantas Pessoas moram nesse domicilio"
+        android:inputType="text"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/quantascriancas"
+        android:layout_width="150dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_background"
+        android:hint="Quantas crianças moram neste domicilio: "
+        android:inputType="text"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

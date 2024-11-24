@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Censo_amip"
         tools:targetApi="31">
         <activity
+            android:name=".RendimentosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EducacaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroCivilActivity"
+            android:exported="false" />
+        <activity
             android:name=".CaracteristicasDomActivity"
             android:exported="false" />
         <activity
