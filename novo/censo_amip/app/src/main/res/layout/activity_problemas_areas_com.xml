@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context=".ProblemasAreasComActivity">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="22dp"
+                android:contentDescription="Logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logoamiosbg" />
+
+            <TextView
+                android:id="@+id/textInicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Problemas Área \ncomum"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.197"
+                app:layout_constraintStart_toEndOf="@+id/iv_logo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textProblemasCalcadas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Marque os problemas que você enfrenta nas calçadas em frente à sua casa:"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInicial"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_saliencias"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Saliências ou buracos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textProblemasCalcadas"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_depressoes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Depressões(Alagamentos)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_saliencias"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sujeira"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Sujeira e/ou excrementos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_depressoes"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_postes_arvores"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Postes/árvores velhos(Risco de queda)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_sujeira"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <TextView
+                android:id="@+id/textProblemasCanal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Marque os problemas que você enfrenta no canal mais perto da sua casa:"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_postes_arvores"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_assoreado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Assoreado"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textProblemasCanal"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_bloqueado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Bloqueado por vegetação"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_assoreado"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_poluid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Poluído"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_bloqueado"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_invadindo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Invadindo/alagando o terreno"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_poluid"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_postes_arvores_canal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Postes/árvores velhos(Risco de queda)"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_invadindo"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <CheckBox
+                android:id="@+id/checkbox_insetos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Incidências de Insetos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox_postes_arvores_canal"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/checkbox_insetos"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_percent="0.8"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btnVoltar"
+                    android:layout_width="140dp"
+                    android:layout_height="57dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:backgroundTint="@color/verde"
+                    android:text="Voltar" />
+
+                <Button
+                    android:id="@+id/btnProxima"
+                    android:layout_width="140dp"
+                    android:layout_height="57dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/verde"
+                    android:text="Próxima" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

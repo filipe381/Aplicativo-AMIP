@@ -47,6 +47,20 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_logo"
         app:layout_constraintWidth_percent="0.8" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Tem água encanada"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintVertical_bias="0.267" />
+
     <Spinner
         android:id="@+id/spinneresgoto"
         android:layout_width="0dp"
