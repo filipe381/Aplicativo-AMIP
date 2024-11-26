@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#1B523B"
-    tools:context=".RegistroCivilActivity">
+    tools:context=".DadosdeContatoActivity">
 
     <ImageView
         android:id="@+id/iv_logo"
@@ -17,74 +17,78 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logoamiosbg" />
+
     <TextView
         android:id="@+id/textInicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Registro Civil"
+        android:text="Dados de Contato"
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toEndOf="@+id/iv_logo"
         app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="253dp"
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:text="O domicílio tem alguma criança abaixo de 5 anos"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
-        app:layout_constraintVertical_bias="0.025" />
-
-    <RadioGroup
-        android:id="@+id/opcao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_logo">
-
-        <RadioButton
-            android:id="@+id/sim"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="Sim"
-            android:textColor="@color/black" />
-
-        <RadioButton
-            android:id="@+id/nao"
-            android:layout_width="154dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="Não"
-            android:textColor="@color/black" />
-
-    </RadioGroup>
-
-    <Spinner
-        android:id="@+id/spinneregistro"
-        android:layout_width="366dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/rounded_background"
-        android:backgroundTint="@color/verde"
+        android:hint="Nome:"
+        android:inputType="textPersonName"
         android:padding="6dp"
-        android:popupBackground="@color/verde"
-        android:spinnerMode="dropdown"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.621"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_background"
+        android:hint="Email:"
+        android:inputType="textEmailAddress"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/et_CPF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_background"
+        android:hint="CPF:"
+        android:inputType="number"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_background"
+        android:hint="Numero:"
+        android:inputType="phone"
+        android:padding="6dp"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_CPF"
         app:layout_constraintWidth_percent="0.8" />
 
     <Button

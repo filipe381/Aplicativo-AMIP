@@ -23,13 +23,10 @@ class CaracteristicasDomActivity : AppCompatActivity() {
         }
 
         val opcaoRadioGroup: RadioGroup = findViewById(R.id.opcao)
-        val opcao = when (opcaoRadioGroup.checkedRadioButtonId){
-            R.id.sim -> "Sim"
-            R.id.nao -> "Não"
-            else -> "Indefinido"
-        }
-
         val spinneresgoto: Spinner = findViewById(R.id.spinneresgoto)
+        val spinnerlixo: Spinner = findViewById(R.id.spinnerlixo)
+        val spinnerAbastecimentoAgua: Spinner = findViewById(R.id.spinneabastecimentoAgua)
+
         val esgotos = listOf(
             "Para onde o esgoto vai: ",
             "Rede geral",
@@ -38,12 +35,10 @@ class CaracteristicasDomActivity : AppCompatActivity() {
             "Rios, açudes, lagos, córregos",
             "Outro forma"
         )
-
         val esgotosAdapter = ArrayAdapter(this, R.layout.spinner_item, esgotos)
         esgotosAdapter.setDropDownViewResource(R.layout.spinner_item)
         spinneresgoto.adapter = esgotosAdapter
 
-        val spinnerlixo: Spinner = findViewById(R.id.spinnerlixo)
         val tiposlixo = listOf(
             "O lixo desse domicilio é: ",
             "Coleta em domicílio",
@@ -52,12 +47,10 @@ class CaracteristicasDomActivity : AppCompatActivity() {
             "Jogando em terreno baldio",
             "Outro Forma"
         )
-
         val tiposLixoAdapter = ArrayAdapter(this, R.layout.spinner_item, tiposlixo)
         tiposLixoAdapter.setDropDownViewResource(R.layout.spinner_item)
         spinnerlixo.adapter = tiposLixoAdapter
 
-        val spinnerAbastecimentoAgua: Spinner = findViewById(R.id.spinneabastecimentoAgua)
         val abastecimentoAgua = listOf(
             "Forma de abastecimento de água",
             "Água encanada",
@@ -75,22 +68,53 @@ class CaracteristicasDomActivity : AppCompatActivity() {
             val position = abastecimentoAguaAdapter.getPosition(agua)
             spinnerAbastecimentoAgua.setSelection(position)
         }
+        FormData.esgoto?.let { esgoto ->
+            val position = esgotosAdapter.getPosition(esgoto)
+            spinneresgoto.setSelection(position)
+        }
+        FormData.lixo?.let { lixo ->
+            val position = tiposLixoAdapter.getPosition(lixo)
+            spinnerlixo.setSelection(position)
+        }
+        FormData.temAguaEncanada?.let { temAgua ->
+            val radioButtonId = when (temAgua) {
+                "Sim" -> R.id.sim
+                "Não" -> R.id.nao
+                else -> -1
+            }
+            if (radioButtonId != -1) {
+                opcaoRadioGroup.check(radioButtonId)
+            }
+        }
+
         val btnAnterior: Button = findViewById(R.id.btnVoltarcaracteristicasDom)
         btnAnterior.setOnClickListener {
             FormData.abastecimentoAgua = spinnerAbastecimentoAgua.selectedItem.toString()
+            FormData.esgoto = spinneresgoto.selectedItem.toString()
+            FormData.lixo = spinnerlixo.selectedItem.toString()
+            FormData.temAguaEncanada = when (opcaoRadioGroup.checkedRadioButtonId) {
+                R.id.sim -> "Sim"
+                R.id.nao -> "Não"
+                else -> "Indefinido"
+            }
 
             val intent = Intent(this, DomicilioActivity::class.java)
             startActivity(intent)
         }
 
-
         val btnProxima: Button = findViewById(R.id.btnProximacaracteristicasDom)
         btnProxima.setOnClickListener {
             FormData.abastecimentoAgua = spinnerAbastecimentoAgua.selectedItem.toString()
-            // Adicionar outros campos conforme necessário
+            FormData.esgoto = spinneresgoto.selectedItem.toString()
+            FormData.lixo = spinnerlixo.selectedItem.toString()
+            FormData.temAguaEncanada = when (opcaoRadioGroup.checkedRadioButtonId) {
+                R.id.sim -> "Sim"
+                R.id.nao -> "Não"
+                else -> "Indefinido"
+            }
 
-            /*val intent = Intent(this, ProximaActivity::class.java)
-            startActivity(intent)*/
+            val intent = Intent(this, IndoMoradoresActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -1,7 +1,9 @@
 package com.example.censo_amip
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -28,5 +30,25 @@ class RendimentosActivity : AppCompatActivity() {
         val rendimentosAdapter = ArrayAdapter(this, R.layout.spinner_item, rendimentos)
         rendimentosAdapter.setDropDownViewResource(R.layout.spinner_item)
         spinnerRendimento.adapter = rendimentosAdapter
+
+        // Carregar dados salvos
+        FormData.rendimentoDomiciliar?.let { rendimento ->
+            val position = rendimentosAdapter.getPosition(rendimento)
+            spinnerRendimento.setSelection(position)
+        }
+
+        val btnProxima: Button = findViewById(R.id.btnProxima)
+        btnProxima.setOnClickListener {
+            FormData.rendimentoDomiciliar = spinnerRendimento.selectedItem.toString()
+
+            val intent = Intent(this, DadosdeContatoActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnAnterior: Button = findViewById(R.id.btnVoltar)
+        btnAnterior.setOnClickListener {
+            val intent = Intent(this, EducacaoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
